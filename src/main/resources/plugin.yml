@@ -1,0 +1,28 @@
+name: DonutSettings
+version: '2.0.0'
+main: com.donutsmp.settings.DonutSettings
+api-version: '1.21'
+author: ISekai
+description: Advanced settings menu plugin
+
+commands:
+  settings:
+    description: Open the settings menu
+    aliases: [setting, preferences, prefs]
+    permission: donutsettings.use
+  settingsreload:
+    description: Reload the plugin configuration
+    aliases: [sreload, settingsrl]
+    permission: donutsettings.admin
+  antipickup:
+    description: Toggle anti-pickup mode
+    aliases: [ap, nopickup]
+    permission: donutsettings.use
+
+permissions:
+  donutsettings.use:
+    description: Access to settings menu and commands
+    default: true
+  donutsettings.admin:
+    description: Admin permissions for reload
+    default: op

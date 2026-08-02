@@ -1,0 +1,451 @@
+# DonutSettings Configuration
+# Configure your settings menu here
+
+gui:
+  title: "§8Settings"
+  size: 36 # Must be multiple of 9 (9, 18, 27, 36, 45, 54)
+
+  # Sound effects when opening GUI
+  open-sound:
+    enabled: true
+    sound: "BLOCK_CHEST_OPEN"
+    volume: 1.0
+    pitch: 1.0
+
+  # Sound effects when clicking buttons
+  click-sound:
+    enabled: true
+    sound: "UI_BUTTON_CLICK"
+    volume: 0.5
+    pitch: 1.0
+
+# Default states for settings (ON = enabled by default, OFF = disabled by default)
+# These apply when a player first joins or when their data is not found
+defaults:
+  chat: ON
+  tpa: ON
+  tpauto: OFF
+  antipickup: OFF
+  hide: OFF
+  glow: OFF
+  fast-crystals: OFF
+  do-not-disturb: OFF
+
+# Button configurations
+buttons:
+  # Top row signs (slots 10-16) - Server Rules
+  sign-1:
+    enabled: true
+    slot: 10
+    material: OAK_SIGN
+    name: "§x§2§F§D§5§F§Fʀᴜʟᴇ #1"
+    lore:
+      - "§7No griefing or stealing"
+      - "§7from other players"
+    clickable: false
+
+  sign-2:
+    enabled: true
+    slot: 11
+    material: DARK_OAK_SIGN
+    name: "§x§2§F§D§5§F§Fʀᴜʟᴇ #2"
+    lore:
+      - "§7Respect all players"
+      - "§7and staff members"
+    clickable: false
+
+  sign-3:
+    enabled: true
+    slot: 12
+    material: WARPED_SIGN
+    name: "§x§2§F§D§5§F§Fʀᴜʟᴇ #3"
+    lore:
+      - "§7No hacking, cheating"
+      - "§7or exploiting bugs"
+    clickable: false
+
+  sign-4:
+    enabled: true
+    slot: 13
+    material: CRIMSON_SIGN
+    name: "§x§2§F§D§5§F§Fʀᴜʟᴇ #4"
+    lore:
+      - "§7Keep chat clean and"
+      - "§7family-friendly"
+    clickable: false
+
+  sign-5:
+    enabled: true
+    slot: 14
+    material: CHERRY_SIGN
+    name: "§x§2§F§D§5§F§Fʀᴜʟᴇ #5"
+    lore:
+      - "§7No advertising other"
+      - "§7servers or links"
+    clickable: false
+
+  sign-6:
+    enabled: true
+    slot: 15
+    material: BAMBOO_SIGN
+    name: "§x§2§F§D§5§F§Fʀᴜʟᴇ #6"
+    lore:
+      - "§7Do not spam commands"
+      - "§7or flood the chat"
+    clickable: false
+
+  sign-7:
+    enabled: true
+    slot: 16
+    material: ACACIA_SIGN
+    name: "§x§2§F§D§5§F§Fʀᴜʟᴇ #7"
+    lore:
+      - "§7Have fun and enjoy"
+      - "§7playing on the server!"
+    clickable: false
+
+  # Bottom row - actual settings
+  # Slot 19 - Fast Crystals (END_CRYSTAL)
+  fast-crystals:
+    enabled: true
+    slot: 19
+    clickable: true
+
+    material-on: END_CRYSTAL
+    name-on: "§x§2§F§F§F§8§9ꜰᴀѕᴛ ᴄʀʏѕᴛᴀʟѕ"
+    lore-on:
+      - "§7Currently: §x§2§F§F§F§6§7§lON"
+    enchanted-on: true
+
+    material-off: END_CRYSTAL
+    name-off: "§x§2§F§F§F§8§9ꜰᴀѕᴛ ᴄʀʏѕᴛᴀʟѕ"
+    lore-off:
+      - "§7Currently: §x§F§F§2§F§2§F§lOFF"
+    enchanted-off: false
+
+    command-on: "fastcrystals on"
+    command-off: "fastcrystals off"
+
+    sound-on:
+      enabled: true
+      sound: "ENTITY_ENDER_DRAGON_GROWL"
+      volume: 0.3
+      pitch: 2.0
+    sound-off:
+      enabled: true
+      sound: "ENTITY_ENDER_DRAGON_HURT"
+      volume: 0.3
+      pitch: 0.5
+
+    particle-on:
+      enabled: true
+      particle: "PORTAL"
+      count: 20
+    particle-off:
+      enabled: true
+      particle: "SMOKE_NORMAL"
+      count: 5
+
+    # NEW: Customizable message destinations
+    # Use -1 to disable a specific destination
+    message-on:
+      title: "§bFast Crystals"
+      subtitle: "§7Enabled"
+      actionbar: "-1"
+      chat: "-1"
+    message-off:
+      title: "§bFast Crystals"
+      subtitle: "§7Disabled"
+      actionbar: "-1"
+      chat: "-1"
+    permission: ""
+
+  # Slot 20 - TPA (ENDER_PEARL)
+  tpa:
+    enabled: true
+    slot: 20
+    clickable: true
+
+    material-on: ENDER_PEARL
+    name-on: "§x§2§F§F§F§8§9ᴛᴘᴀ"
+    lore-on:
+      - "§7Currently: §x§2§F§F§F§6§7§lON"
+    enchanted-on: true
+
+    material-off: ENDER_PEARL
+    name-off: "§x§2§F§F§F§8§9ᴛᴘᴀ"
+    lore-off:
+      - "§7Currently: §x§F§F§2§F§2§F§lOFF"
+    enchanted-off: false
+
+    command-on: ""
+    command-off: ""
+
+    sound-on:
+      enabled: true
+      sound: "ENTITY_PLAYER_LEVELUP"
+      volume: 0.5
+      pitch: 1.5
+    sound-off:
+      enabled: true
+      sound: "BLOCK_FIRE_EXTINGUISH"
+      volume: 0.5
+      pitch: 1.0
+
+    particle-on:
+      enabled: true
+      particle: "VILLAGER_HAPPY"
+      count: 10
+    particle-off:
+      enabled: true
+      particle: "SMOKE_NORMAL"
+      count: 5
+
+    message-on:
+      title: "-1"
+      subtitle: "-1"
+      actionbar: "-1"
+      chat: "§aTPA requests enabled!"
+    message-off:
+      title: "-1"
+      subtitle: "-1"
+      actionbar: "-1"
+      chat: "§cTPA requests disabled!"
+    permission: ""
+
+  # Slot 22 - TPAuto (SHIELD)
+  tpauto:
+    enabled: true
+    slot: 22
+    clickable: true
+
+    material-on: SHIELD
+    name-on: "§x§2§F§F§F§8§9ᴛᴘᴀᴜᴛᴏ"
+    lore-on:
+      - "§7Currently: §x§2§F§F§F§6§7§lON"
+    enchanted-on: true
+
+    material-off: SHIELD
+    name-off: "§x§2§F§F§F§8§9ᴛᴘᴀᴜᴛᴏ"
+    lore-off:
+      - "§7Currently: §x§F§F§2§F§2§F§lOFF"
+    enchanted-off: false
+
+    command-on: ""
+    command-off: ""
+
+    sound-on:
+      enabled: true
+      sound: "ENTITY_PLAYER_LEVELUP"
+      volume: 0.5
+      pitch: 1.5
+    sound-off:
+      enabled: true
+      sound: "BLOCK_FIRE_EXTINGUISH"
+      volume: 0.5
+      pitch: 1.0
+
+    particle-on:
+      enabled: true
+      particle: "VILLAGER_HAPPY"
+      count: 10
+    particle-off:
+      enabled: true
+      particle: "SMOKE_NORMAL"
+      count: 5
+
+    message-on:
+      title: "-1"
+      subtitle: "-1"
+      actionbar: "-1"
+      chat: "§aTPAuto enabled!"
+    message-off:
+      title: "-1"
+      subtitle: "-1"
+      actionbar: "-1"
+      chat: "§cTPAuto disabled!"
+    permission: ""
+
+  # Slot 23 - Anti Pickup (EMERALD)
+  antipickup:
+    enabled: true
+    slot: 23
+    clickable: true
+
+    material-on: EMERALD
+    name-on: "§x§2§F§F§F§8§9ᴀɴᴛɪ ᴘɪᴄᴋᴜᴘ"
+    lore-on:
+      - "§7Currently: §x§2§F§F§F§6§7§lON"
+    enchanted-on: true
+
+    material-off: EMERALD
+    name-off: "§x§2§F§F§F§8§9ᴀɴᴛɪ ᴘɪᴄᴋᴜᴘ"
+    lore-off:
+      - "§7Currently: §x§F§F§2§F§2§F§lOFF"
+    enchanted-off: false
+
+    command-on: ""
+    command-off: ""
+
+    sound-on:
+      enabled: true
+      sound: "ENTITY_PLAYER_LEVELUP"
+      volume: 0.5
+      pitch: 1.5
+    sound-off:
+      enabled: true
+      sound: "BLOCK_FIRE_EXTINGUISH"
+      volume: 0.5
+      pitch: 1.0
+
+    particle-on:
+      enabled: true
+      particle: "VILLAGER_HAPPY"
+      count: 10
+    particle-off:
+      enabled: true
+      particle: "SMOKE_NORMAL"
+      count: 5
+
+    message-on:
+      title: "-1"
+      subtitle: "-1"
+      actionbar: "§aAnti Pickup enabled!"
+      chat: "-1"
+    message-off:
+      title: "-1"
+      subtitle: "-1"
+      actionbar: "§cAnti Pickup disabled!"
+      chat: "-1"
+    permission: ""
+
+  # Slot 24 - Hide Players (BELL)
+  hide:
+    enabled: true
+    slot: 24
+    clickable: true
+
+    material-on: BELL
+    name-on: "§x§2§F§F§F§8§9ʜɪᴅᴇ"
+    lore-on:
+      - "§7Currently: §x§2§F§F§F§6§7§lON"
+    enchanted-on: true
+
+    material-off: BELL
+    name-off: "§x§2§F§F§F§8§9ʜɪᴅᴇ"
+    lore-off:
+      - "§7Currently: §x§F§F§2§F§2§F§lOFF"
+    enchanted-off: false
+
+    command-on: "hide"
+    command-off: "hide"
+
+    sound-on:
+      enabled: true
+      sound: "ENTITY_PLAYER_LEVELUP"
+      volume: 0.5
+      pitch: 1.5
+    sound-off:
+      enabled: true
+      sound: "BLOCK_FIRE_EXTINGUISH"
+      volume: 0.5
+      pitch: 1.0
+
+    particle-on:
+      enabled: true
+      particle: "VILLAGER_HAPPY"
+      count: 10
+    particle-off:
+      enabled: true
+      particle: "SMOKE_NORMAL"
+      count: 5
+
+    message-on:
+      title: "-1"
+      subtitle: "-1"
+      actionbar: "-1"
+      chat: "-1"
+    message-off:
+      title: "-1"
+      subtitle: "-1"
+      actionbar: "-1"
+      chat: "-1"
+    permission: ""
+
+  # Slot 25 - Chat (BOOK)
+  chat:
+    enabled: true
+    slot: 25
+    clickable: true
+
+    material-on: BOOK
+    name-on: "§x§2§F§F§F§8§9ᴄʜᴀᴛ"
+    lore-on:
+      - "§7Currently: §x§2§F§F§F§6§7§lON"
+    enchanted-on: true
+
+    material-off: BOOK
+    name-off: "§x§2§F§F§F§8§9ᴄʜᴀᴛ"
+    lore-off:
+      - "§7Currently: §x§F§F§2§F§2§F§lOFF"
+    enchanted-off: false
+
+    command-on: ""
+    command-off: ""
+
+    sound-on:
+      enabled: true
+      sound: "ENTITY_PLAYER_LEVELUP"
+      volume: 0.5
+      pitch: 1.5
+    sound-off:
+      enabled: true
+      sound: "BLOCK_FIRE_EXTINGUISH"
+      volume: 0.5
+      pitch: 1.0
+
+    particle-on:
+      enabled: true
+      particle: "VILLAGER_HAPPY"
+      count: 10
+    particle-off:
+      enabled: true
+      particle: "SMOKE_NORMAL"
+      count: 5
+
+    message-on:
+      title: "-1"
+      subtitle: "-1"
+      actionbar: "-1"
+      chat: "§aChat enabled!"
+    message-off:
+      title: "-1"
+      subtitle: "-1"
+      actionbar: "-1"
+      chat: "§cChat disabled! You won't see any messages."
+    permission: ""
+
+# Advanced Features
+features:
+  close-on-click: false
+
+  toggle-cooldown:
+    enabled: true
+    duration: 2
+    message: "§cPlease wait {time} seconds before toggling again!"
+
+  use-actionbar: false
+
+  use-titles:
+    enabled: true
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+
+# Messages
+messages:
+  no-permission: "§cYou don't have permission to use this!"
+  no-button-permission: "§cYou don't have permission to toggle this setting!"
+  cooldown-active: "§cPlease wait before toggling again!"
+  reload-success: "§aConfiguration reloaded successfully!"
+  reload-failed: "§cFailed to reload configuration!"

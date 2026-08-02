@@ -1,0 +1,12 @@
+.idea/
+.gradle/
+.git/
+build/
+target/
+out/
+bin/
+*.iml
+*.log
+
+# Stray backup archive, not source - kept but not published
+sourcecode-donutsettings.zip
